@@ -32,10 +32,19 @@ The output files is a file containing the following columns:
 ########   MR_multi.R
 MR_multi.R requires as input a matrix containing as columns:
 -SNPs: the SNPs to be included in the model;
--GENE: the univariate effect size of the SNPs on gene expression (these estimates come from an eQTL study) 
--METABOLITE: the univariate effect size of the SNPs on the metabolite (these estimates come from an mQTL study) 
+-GENE: the univariate effect size of the SNPs on gene expression (these estimates come from an eQTL study); 
+-METABOLITE: the univariate effect size of the SNPs on the metabolite (these estimates come from an mQTL study); 
 -BETA_GWAS: the univariate effect sizes of the SNPs on the phenotype 
 
 How to run the script:
 
-R < MR_multi.R --no-save 
+R < MR_multi.R --no-save ENSG00000261015_M32654_bilirubin_matrix.txt
+
+
+
+######## power.R
+Here we reported the code we used for the simulation analysis performed to estimate the gain in power when we use the mediation analysis.
+
+How to run the script:
+R < power.R --no-save
+
