@@ -1,13 +1,17 @@
 # Gene_Metab_Pheno
 Codes used in "Exploiting the mediating role of the metabolome to unravel transcript-to-phenotype associations" (Auwerx et al, bioRxiv 2022)
 
-
-MR_uni.R requires as input a matrix containing the univariate effect size of n SNPs on gene expression (these estimates come from an eQTL study) 
-and the univariate effect sizes on the phenotype. The last three columns are: BETA_GWAS SE N
+########   MR_uni.R
+MR_uni.R requires as input a matrix containing as columns:
+-SNPs: the SNPs to be included in the model
+-GENE: the univariate effect size of the SNPs on gene expression (these estimates come from an eQTL study) 
+-GENE_N: the sample size of the eQTL study
+-BETA_GWAS: the univariate effect sizes of the SNPs on the phenotype 
+-N: the sample size of the GWAS
 
 How to run the script:
 
-R < MR_uni.R --no-save bmi.matrix.betaGWAS bmi genes.N
+R < MR_uni.R --no-save ENSG00000115216_matrix.txt
 
 The output files is a file containing the following columns: 
 -gene: name of the gene tested 
@@ -22,6 +26,8 @@ The output files is a file containing the following columns:
 -N: number of SNPs left after outlier removal 
 -Phet: Pvalue of heterogenity test after outlier removal
 -N_outlier: number of removed outliers
+
+
 
 
 
