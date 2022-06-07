@@ -13,8 +13,8 @@ out<-c("gene","alpha_ORIGINAL","SE_ORIGINAL","P_ORIGINAL","N_ORIGINAL","P_het_OR
 
 filecluster<-read.table(INPUT,header=T,sep=" ",dec=".")
 beta<-as.vector(filecluster[,2])
-gamma<-as.vector(filecluster[,(length(filecluster[1,])-3)])
-N_gwas<-filecluster[,(length(filecluster[1,])-1)]
+gamma<-as.vector(filecluster[,(length(filecluster[1,])-1)])
+N_gwas<-filecluster[,length(filecluster[1,])]
 N_gwas<-as.vector(N_gwas)
 N_eQTLs<-as.vector(filecluster[,3])
 zrev = (abs(beta) - abs(gamma)) /sqrt((1/filecluster[,3]) + (1/N_gwas) )
