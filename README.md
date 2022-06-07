@@ -2,6 +2,7 @@
 Codes used in "Exploiting the mediating role of the metabolome to unravel transcript-to-phenotype associations" (Auwerx et al, bioRxiv 2022)
 
 ########   MR_uni.R
+
 MR_uni.R requires as input a matrix containing as columns:
 -SNPs: the SNPs to be included in the model
 -GENE: the univariate effect size of the SNPs on gene expression (these estimates come from an eQTL study) 
@@ -30,6 +31,7 @@ The output files is a file containing the following columns:
 
 
 ########   MR_multi.R
+
 MR_multi.R requires as input a matrix containing as columns:
 -SNPs: the SNPs to be included in the model;
 -GENE: the univariate effect size of the SNPs on gene expression (these estimates come from an eQTL study); 
