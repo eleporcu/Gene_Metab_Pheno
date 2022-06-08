@@ -11,6 +11,7 @@ MR_uni.R requires as input a matrix containing the following columns:
 -N: the sample size of the GWAS.
 
 How to run the script:
+
 R < MR_uni.R --no-save ENSG00000115216_matrix.txt
 
 The output is a file containing the following columns: 
@@ -37,6 +38,7 @@ MR_multi.R requires as input a matrix containing the following columns:
  -BETA_GWAS: the univariate effect sizes of these SNPs on the phenotype.
 
 How to run the script:
+
 R < MR_multi.R --no-save ENSG00000261015_M32654_bilirubin_matrix.txt
 
 The output gives the direct effect
@@ -45,7 +47,9 @@ The output gives the direct effect
 ######## power.R 
 
 Code we used for the simulation analysis performed to estimate differences in power when ussing the mediation analysis, as opposed to transcriptome-wide Mendelian rrandomization (TWMR).
-How to run the script: R < power.R --no-save
+How to run the script: 
+
+R < power.R --no-save
 
 
 How to run the script:
